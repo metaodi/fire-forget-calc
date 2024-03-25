@@ -17,6 +17,7 @@ Options:
 from docopt import docopt
 import json
 from pprint import pprint
+from datetime import datetime
 
 
 arguments = docopt(__doc__, version="Calculate something 1.0")
@@ -26,7 +27,7 @@ output = arguments['--output']
 
 result = {
   "hallo": "velo",
-  "input": input,
+  "input": f"{input} {datetime.now().isoformat()}",
 }
 
 print("Result:")
