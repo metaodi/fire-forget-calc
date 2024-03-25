@@ -1,0 +1,16 @@
+name: Call Calc something
+
+on:
+  workflow_dispatch:
+    inputs:
+      input_string:
+        description: 'Input (str)'
+        required: true
+        default: 1+2
+        type: string
+
+jobs:
+  call_calc:
+    uses: metaodi/fire-forget-calc/.github/workflows/calc.yml@main
+    with:
+      input: ${{ inputs.input_string }}
