@@ -23,11 +23,11 @@ arguments = docopt(__doc__, version="Calculate something 1.0")
 input = arguments['--input']
 output = arguments['--output']
 
-output = {
+result = {
   "hallo": "velo",
   "input": input,
 }
 
 
 with open(output, "w") as f:
-  f.write(json.dumps(output, indent=4))
+  f.write(json.dumps(result, indent=4))
