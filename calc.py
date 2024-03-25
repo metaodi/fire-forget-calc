@@ -16,6 +16,7 @@ Options:
 
 from docopt import docopt
 import json
+from pprint import pprint
 
 
 arguments = docopt(__doc__, version="Calculate something 1.0")
@@ -28,6 +29,8 @@ result = {
   "input": input,
 }
 
+print("Result:")
+pprint(result)
 
 with open(output, "w") as f:
   f.write(json.dumps(result, indent=4))
