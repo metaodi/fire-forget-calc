@@ -1,4 +1,4 @@
-name: Call Calc something
+name: Repo-Call Calc something
 
 on:
   repository_dispatch:
