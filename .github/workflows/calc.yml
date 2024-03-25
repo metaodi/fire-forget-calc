@@ -3,7 +3,7 @@ name: Calc something
 on:
    workflow_call:
     inputs:
-      input:
+      input_str:
         required: true
         type: string
 
@@ -27,7 +27,7 @@ jobs:
           
       - name: Calculate it
         run: |
-          python calc.py -i "${{ inputs.input }}" -o output.json
+          python calc.py -i "${{ inputs.input_str }}" -o output.json
 
       - name: Upload output.json as artifact
         uses: actions/upload-artifact@v4
