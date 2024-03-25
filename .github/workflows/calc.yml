@@ -1,8 +1,11 @@
 name: Calc something
 
 on:
-  repository_dispatch:
-    types: [calc_test]
+   workflow_call:
+    inputs:
+      input:
+        required: true
+        type: string
 
 jobs:
   calc:
@@ -24,7 +27,7 @@ jobs:
           
       - name: Calculate it
         run: |
-          python calc.py -i ${{ github.event.client_payload.input }} -o output.json
+          python calc.py -i ${{ inputs.csv-path }} -o output.json
 
       - name: Upload output.json as artifact
         uses: actions/upload-artifact@v4
