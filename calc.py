@@ -18,7 +18,7 @@ from docopt import docopt
 import json
 
 
-arguments = docopt(__doc__, version="Calculate something 1.0")$
+arguments = docopt(__doc__, version="Calculate something 1.0")
 
 input = arguments['--input']
 output = arguments['--output']
