@@ -37,7 +37,7 @@ result = {
 }
 
 # pretend to do something time consuming
-time.sleep(60)
+time.sleep(100)
 
 print("Result:")
 pprint(result)
